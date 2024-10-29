@@ -12,7 +12,7 @@ app = FastAPI()
 # PqBVVgNB7UdvqCmT
 
 # Connect to MongoDB
-client = MongoClient("mongodb+srv://deepakkumar:PqBVVgNB7UdvqCmT@cluster0.zj3u8.mongodb.net/")
+client = MongoClient("mongodb+srv://deepakkumar:PqBVVgNB7UdvqCmT@cluster0.zj3u8.mongodb.net/contact_us_db?retryWrites=true&w=majority&tls=true")
 db = client["contact_us_db"]  # Database name
 contact_collection = db["contacts"]  # Collection name
 

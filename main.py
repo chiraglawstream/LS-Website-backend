@@ -8,11 +8,12 @@ import re
 # Initialize the FastAPI app
 app = FastAPI()
 
-# deepakkumar
-# PqBVVgNB7UdvqCmT
+# chiragyadav
+# 9NioCDpLD9OgVt9m
 
 # Connect to MongoDB
-client = MongoClient("mongodb+srv://deepakkumar:PqBVVgNB7UdvqCmT@cluster0.zj3u8.mongodb.net/contact_us_db?retryWrites=true&w=majority&tls=true")
+client = MongoClient("mongodb+srv://chiragyadav:9NioCDpLD9OgVt9m@cluster0.fptls.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", tls=True,
+    tlsAllowInvalidCertificates=True)
 db = client["contact_us_db"]  # Database name
 contact_collection = db["contacts"]  # Collection name
 

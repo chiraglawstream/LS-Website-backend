@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field, root_validator
 from typing import List, Optional
 from pymongo import MongoClient
@@ -10,7 +11,20 @@ app = FastAPI()
 
 # chiragyadav
 # 9NioCDpLD9OgVt9m
+# Configure CORS
+origins = [
+    "http://localhost:3000",  # Allow requests from localhost for development
+    "https://lawstream-web.vercel.app",
+    "https://lawstream.in"# Add your production frontend URL here
+]
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Connect to MongoDB
 client = MongoClient("mongodb+srv://chiragyadav:9NioCDpLD9OgVt9m@cluster0.fptls.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", tls=True,
     tlsAllowInvalidCertificates=True)

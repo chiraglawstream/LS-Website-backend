@@ -4,3 +4,4 @@ typing-extensions==4.4.0
 pymongo==4.3.3
 uvicorn==0.30.6
 email-validator
+python-dotenv

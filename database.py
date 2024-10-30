@@ -8,7 +8,7 @@ mongo_uri = os.getenv("MONGO_URI")
 
 def get_database():
     try:
-        client = MongoClient(mongo_uri, tls=True, tlsAllowInvalidCertificates=True)
+        client = MongoClient("mongodb+srv://chiragyadav:9NioCDpLD9OgVt9m@cluster0.fptls.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", tls=True, tlsAllowInvalidCertificates=True)
         db = client["contact_us_db"]
         return db["contacts"] 
     except Exception as e:

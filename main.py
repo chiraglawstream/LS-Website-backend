@@ -15,7 +15,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",  # Allow requests from localhost for development
     "https://lawstream-web.vercel.app",
-    "https://lawstream.in"# Add your production frontend URL here
+    "https://www.lawstream.in"# Add your production frontend URL here
 ]
 
 app.add_middleware(

@@ -13,6 +13,6 @@ def configure_cors(app):
         CORSMiddleware,
         allow_origins=CORS_ORIGINS,
         allow_credentials=True,
-        allow_methods=["POST", "GET"],
+        allow_methods=["*"],
         allow_headers=["*"],
     )

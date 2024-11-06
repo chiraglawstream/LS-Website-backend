@@ -172,7 +172,7 @@ async def submit_chatbot_user_ticket(
 
 # POST API endpoint to handle chatbot bookings submission
 @app.post("/booking")
-async def submit_chatbot_user_ticket(
+async def submit_chatbot_user_booking(
     booking_data: booking_model, 
     chatbot_user_booking=Depends(get_chatbot_user_booking)
 ):

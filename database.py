@@ -10,7 +10,7 @@ def get_database():
     try:
         client = MongoClient(mongo_uri, tls=True, tlsAllowInvalidCertificates=True)
         db = client["contact_us_db"]
-        return db["contacts"] 
+        return db
     except Exception as e:
         print(f"Database connection error: {e}")
         raise

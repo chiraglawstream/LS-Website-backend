@@ -5,8 +5,6 @@ from datetime import datetime
 
 # Pydantic model for validating the form data
 class raise_ticket(BaseModel):
-    user_id: str
-    first_name: str
     email: EmailStr 
     issue: str
     status: str

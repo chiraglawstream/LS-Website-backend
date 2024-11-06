@@ -5,8 +5,6 @@ from datetime import datetime
 
 # Pydantic model for validating the form data
 class booking_model(BaseModel):
-    user_id: str
-    first_name: str
     email: EmailStr 
     tools_of_interest: List[str]
     preferred_demo_datetime: Optional[datetime]

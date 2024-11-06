@@ -105,23 +105,7 @@ async def submit_chatbot_user_form(
         validate_phone_number(form_data.phone_number)
 
         # Insert form data into MongoDB collection
-        insert_result = chatbot_user_collection.insert_one(form_data.dict())
-        user_id = str(insert_result.inserted_id)
-
-        response.set_cookie(
-            key="user_id", 
-            value=user_id, 
-            httponly=False, 
-            secure=True, 
-            samesite="Strict"
-        )
-        response.set_cookie(
-            key="name", 
-            value=form_data.first_name, 
-            httponly=False, 
-            secure=True, 
-            samesite="Strict"
-        )
+        chatbot_user_collection.insert_one(form_data.dict())
 
         user_id = str(insert_result.inserted_id) 
         return {

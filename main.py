@@ -111,14 +111,14 @@ async def submit_chatbot_user_form(
         response.set_cookie(
             key="user_id", 
             value=user_id, 
-            httponly=True, 
+            httponly=False, 
             secure=True, 
             samesite="Strict"
         )
         response.set_cookie(
             key="name", 
             value=form_data.first_name, 
-            httponly=True, 
+            httponly=False, 
             secure=True, 
             samesite="Strict"
         )

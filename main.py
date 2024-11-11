@@ -107,7 +107,6 @@ async def submit_chatbot_user_form(
         # Insert form data into MongoDB collection
         chatbot_user_collection.insert_one(form_data.dict())
 
-        user_id = str(insert_result.inserted_id) 
         return {
             "message": "Chatbot form submitted successfully.",
         }
